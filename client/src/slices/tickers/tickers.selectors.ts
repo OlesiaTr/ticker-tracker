@@ -18,7 +18,7 @@ export const selectLastTradeTime = (ticker: string) =>
 
     if (filteredTickers.length > 0) {
       const lastTicker = filteredTickers[filteredTickers.length - 1];
-      return new Date(lastTicker.last_trade_time).toLocaleString();
+      return new Date(lastTicker.last_trade_time).toLocaleTimeString();
     }
 
     return null;
