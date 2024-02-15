@@ -51,6 +51,8 @@ function getQuotes(socket) {
 }
 
 function trackTickers(socket) {
+  getQuotes(socket)
+
   clearInterval(timer)
   timer = setInterval(() => getQuotes(socket), dataUpdateInterval)
 }
