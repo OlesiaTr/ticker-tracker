@@ -46,7 +46,7 @@ const Chart: FC<Props> = ({ selectedTicker }) => {
   );
 
   return (
-    <section style={{ paddingTop: '20px' }}>
+    <section style={{ paddingTop: '20px' }} data-testid="chart-section">
       <ResponsiveContainer width="100%" height={400}>
         <LineChart width={800} height={400} data={uniqueFormattedData}>
           <CartesianGrid strokeDasharray="3 3" />

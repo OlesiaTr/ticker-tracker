@@ -1,14 +1,7 @@
 import { createSlice } from '@reduxjs/toolkit';
-import { TickerData } from '../../types';
+import { TickerState } from '../../types';
 
-interface State {
-  tickers: TickerData[];
-  tickersHistory: TickerData[];
-  isLoading: boolean;
-  error: unknown;
-}
-
-export const initialState: State = {
+export const initialState: TickerState = {
   tickers: [],
   tickersHistory: [],
   isLoading: false,

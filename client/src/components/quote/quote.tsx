@@ -1,8 +1,11 @@
 import { FC } from 'react';
-import { QuoteCard } from '../quote-card';
-import { QuoteList } from './quote.styled';
 import { useSelector } from 'react-redux';
+
 import { selectTickers } from '../../slices/tickers';
+
+import { QuoteCard } from '../quote-card';
+
+import { QuoteList } from './quote.styled';
 
 export interface Props {
   onTickerClick: (ticker: string) => void;

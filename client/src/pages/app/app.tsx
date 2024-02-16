@@ -1,10 +1,12 @@
+import { useState } from 'react';
 import { useDispatch, useSelector } from 'react-redux';
-import { Quote } from '../../components/quote';
+
 import { useTickerSubscription } from '../../service/socket';
 import { fetchTickersSuccess, selectLastTradeTime } from '../../slices/tickers';
-import { Chart } from '../../components/chart';
-import { useState } from 'react';
 import { THE_TICKER_ON_LOAD } from '../../constants';
+
+import { Quote } from '../../components/quote';
+import { Chart } from '../../components/chart';
 import { Loader } from '../../components/loader';
 import { StyledSelect } from '../../components/select-input';
 

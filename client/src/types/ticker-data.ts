@@ -5,6 +5,6 @@ export interface TickerData {
   change: number;
   change_percent: number;
   dividend: number;
-  yield: string;
+  yield: number;
   last_trade_time: string;
 }

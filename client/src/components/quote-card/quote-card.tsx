@@ -1,5 +1,8 @@
 import { FC } from 'react';
 
+import { TickerData } from '../../types';
+import { ArrowDown, ArrowUp } from '../../assets/icons';
+
 import {
   AdditionalInfo,
   Change,
@@ -12,8 +15,6 @@ import {
   TickerCard,
   TickerHeader,
 } from './quote-card.styled';
-import { TickerData } from '../../types';
-import { ArrowDown, ArrowUp } from '../../assets/icons';
 
 interface Props {
   quote: TickerData;
@@ -35,7 +36,11 @@ const QuoteCard: FC<Props> = ({ quote, onTickerClick }) => {
         <AdditionalInfo>
           <Change>{change}</Change>
           <ChangePercent $isProfitable={isProfitable}>
-            {isProfitable ? <ArrowUp /> : <ArrowDown />}
+            {isProfitable ? (
+              <ArrowUp testId="arrow-up" />
+            ) : (
+              <ArrowDown testId="arrow-down" />
+            )}
             {change_percent}
           </ChangePercent>
         </AdditionalInfo>
